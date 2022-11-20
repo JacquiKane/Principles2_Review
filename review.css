@@ -1,78 +1,89 @@
-/* Apply to all elements */
+/**
+ * /* Apply to all elements
+ *
+ * @format
+ */
+
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 /* COLORS and FONTS */
 body {
-    color: rgb(22, 21, 21);
-    text-align: center;
+  color: rgb(22, 21, 21);
+  text-align: center;
 }
+
 header {
-    height: 100px;
-    background: #e1f7f7;
-    font-size: 150%;
+  height: 100px;
+  background: #e1f7f7;
+  font-size: 150%;
 }
 main {
-    background: #bed1d1;
-    text-align: left;
+  background: #bed1d1;
+  text-align: left;
 }
 footer {
-    background: #e1f7f7;
+  background: #e1f7f7;
 }
 .right-sidebar {
-    background: #83a3a3;
-    color: gainsboro;
+  background: #83a3a3;
+  color: gainsboro;
+}
+
+.right-sidebar img {
+  width: 80%;
+  height: auto;
 }
 
 /* The links can be represented as a restyled list */
 .holygrail-menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 .holygrail-menu a {
-    display: block;
-    padding: 0.4em 0;
-    color: inherit;
-    text-decoration: none;
-    }
-.holygrail-menu a:hover,.holygrail-menu a:focus {
-    padding: 0.4em 1em;
-    background: rgb(88, 84, 84);
-    color: white;
-    }
-
+  display: block;
+  padding: 0.4em 0;
+  color: inherit;
+  text-decoration: none;
+}
+.holygrail-menu a:hover,
+.holygrail-menu a:focus {
+  padding: 0.4em 1em;
+  background: rgb(88, 84, 84);
+  color: white;
+}
 
 /* Can choose to default to cell layout or desktop layout */
 /* default cell layout */
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 /* full screen type layout */
 @media screen and (min-width: 768px) {
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap;    
-    } 
-    header, 
-    footer {
-        width: 100%;
-    }
-    main {
-        flex: 2;
-        order: 2;
-        /* vh is viewport height, a screen unit */
-        min-height: 80vh;
-    }
-    
-    .right-sidebar {
-        flex: 1;
-        order: 3;
-    }
-    footer {
-        order: 4;
-    }
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header,
+  footer {
+    width: 100%;
+  }
+  main {
+    flex: 2;
+    order: 2;
+    /* vh is viewport height, a screen unit */
+    min-height: 80vh;
+  }
+
+  .right-sidebar {
+    flex: 1;
+    order: 3;
+  }
+  footer {
+    order: 4;
+  }
 }
